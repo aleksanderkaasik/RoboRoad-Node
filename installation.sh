@@ -6,10 +6,10 @@ domain=$1
 
 URL="http://$domain/api/add"
 
-data="{ 
+data="{
         \"NodeName\": \"$2\",
         \"NodeAddress\": \"$3\"
-    }"
+}"
 
 curl -X POST $URL \
      -H "Accept: application/json" \
