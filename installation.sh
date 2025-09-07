@@ -1,4 +1,6 @@
-for item in $(cat package.txt); do
+package=$(find "/" -type f -name "package.txt" 2>/dev/null | head -n 1)
+
+for item in $(cat $package); do
     apt install -y $item
 done
 
