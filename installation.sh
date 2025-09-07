@@ -2,11 +2,11 @@ for item in $(cat package.txt); do
     apt install -y $item
 done
 
-$domain=$1
+domain=$1
 
 URL="http://$domain/api/add"
 
-$data="{ 
+data="{ 
         \"NodeName\": \"$2\",
         \"NodeAddress\": \"$3\"
     }"
